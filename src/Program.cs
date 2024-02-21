@@ -1,6 +1,6 @@
 ﻿using src.Employee;
 
-namespace Program
+namespace program
 {
     class Program
     {
@@ -13,7 +13,7 @@ namespace Program
             employees.Add(new Employee("\"Cranky Dave\" Brinkley", 39119, "IT", "Developer"));
             // Create Maxine
             employees.Add(new Employee("Maxine Andrews", 81774, "Manufacturing", "Engineer"));
-            
+
             // get max field size
             int maxName = "Name".Length;
             int maxID = "ID Number".Length;
@@ -26,17 +26,17 @@ namespace Program
                 maxID = Math.Max(maxID, employee.IDNumber.ToString().Length);
                 maxDept = Math.Max(maxDept, employee.Department.Length);
                 maxPos = Math.Max(maxPos, employee.Position.Length);
-            }   
+            }
 
             // Print out table
-            Console.WriteLine(String.Format("-{0," + maxName + "}-{1," + maxID + "}-{2," + maxDept + "}-{3," + maxPos + "}-", new string('-', maxName), new string('-', maxID), new string('-', maxDept), new string('-', maxPos)));
-            Console.WriteLine(String.Format("|{0," + maxName + "}|{1," + maxID + "}|{2," + maxDept + "}|{3," + maxPos + "}|", "Name", "ID Number", "Department", "Position"));
+            Console.WriteLine(string.Format("-{0," + maxName + "}-{1," + maxID + "}-{2," + maxDept + "}-{3," + maxPos + "}-", new string('-', maxName), new string('-', maxID), new string('-', maxDept), new string('-', maxPos)));
+            Console.WriteLine(string.Format("|{0," + maxName + "}|{1," + maxID + "}|{2," + maxDept + "}|{3," + maxPos + "}|", "Name", "ID Number", "Department", "Position"));
             foreach (var employee in employees)
             {
-                Console.WriteLine(String.Format("|{0," + maxName + "}|{1," + maxID + "}|{2," + maxDept + "}|{3," + maxPos + "}|", new string('-', maxName), new string('-', maxID), new string('-', maxDept), new string('-', maxPos)));
-                Console.WriteLine(String.Format("|{0," + maxName + "}|{1," + maxID + "}|{2," + maxDept + "}|{3," + maxPos + "}|", employee.Name, employee.IDNumber, employee.Department, employee.Position));
+                Console.WriteLine(string.Format("|{0," + maxName + "}|{1," + maxID + "}|{2," + maxDept + "}|{3," + maxPos + "}|", new string('-', maxName), new string('-', maxID), new string('-', maxDept), new string('-', maxPos)));
+                Console.WriteLine(string.Format("|{0," + maxName + "}|{1," + maxID + "}|{2," + maxDept + "}|{3," + maxPos + "}|", employee.Name, employee.IDNumber, employee.Department, employee.Position));
             }
-            Console.WriteLine(String.Format("-{0," + maxName + "}-{1," + maxID + "}-{2," + maxDept + "}-{3," + maxPos + "}-", new string('-', maxName), new string('-', maxID), new string('-', maxDept), new string('-', maxPos)));
+            Console.WriteLine(string.Format("-{0," + maxName + "}-{1," + maxID + "}-{2," + maxDept + "}-{3," + maxPos + "}-", new string('-', maxName), new string('-', maxID), new string('-', maxDept), new string('-', maxPos)));
         }
     }
-}   
+}
